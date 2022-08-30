@@ -1,0 +1,36 @@
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+highlight = ${xrdb:color15:#222}
+
+[bar/base]
+enable-ipc = true
+font-0=CozetteVector:pixelsize=9;2
+font-1=FontAwesome5Free:style=Solid:pixelsize=8:antialias=true;2
+font-2=IPAGothic:style=Regular:size=10:antialias=true;3
+
+padding = 2
+border-size = 0
+border-color = ${colors.foreground}
+
+height = 30
+;radius = 20
+;Works very well with a radius like this! Put it on every bar.
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+override-redirect=truep
+offset-y = 10
+
+wm-restack = i3
+
+[bar/music]
+inherit = bar/base
+enable-ipc = true
+width = 25%
+offset-x = 37.5%
+modules-center = mpd
+
+[module/mpd]
+type = custom/text
+content = "sadasd"
