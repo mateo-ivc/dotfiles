@@ -227,18 +227,11 @@ exec xinput --set-prop 8 'libinput Accel Speed' -0.7
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
-
 for_window [class=".*"] border pixel 0
 hide_edge_borders both
 
 
-#bar {
-   # height 25
-  #  mode dock
-  #  position top
- #   i3bar_command i3bar -t
-#}
+#exec compton
+#exec spectacle 
 
-
-exec compton
-exec spectacle 
+#exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
