@@ -205,7 +205,7 @@ bar {
 exec xrandr --output DP-0 --primary
 
 # Set background wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/img.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/streets.png
 
 # Displaying background Image properly
 for_window [class=".*"] border pixel 0
@@ -223,6 +223,8 @@ gaps inner 5
 # Mouse sensitifity 
 exec xinput --set-prop 8 'libinput Accel Speed' -0.7  
 
+#exec --no-startup-id picom --config /etc/xdg/picom.conf
+
 # move focused workspace between monitors
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
@@ -234,4 +236,3 @@ hide_edge_borders both
 #exec compton
 #exec spectacle 
 
-#exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
